@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "XqwhQttOml+DmHXnST1QWSHktk4VGL45MlUWSro80X2ty3pD5lTPbbJlRwmRGM7GZ0fHZdHjnc+ldU19ojPm3Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Madushan\\Desktop\\github test\\ExpenseTrackerAPI\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Madushan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Madushan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Madushan\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Madushan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Madushan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Madushan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
