@@ -1,6 +1,8 @@
+using ExpenseTrackerAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +29,10 @@ namespace ExpenseTrackerAPI
         {
 
             services.AddControllers();
+
+            services.AddDbContext<ExpensetrackerContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("ExpenseTrackerDatabase")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ExpenseTrackerAPI", Version = "v1" });

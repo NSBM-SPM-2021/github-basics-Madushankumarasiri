@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Madushan\\Desktop\\github test\\ExpenseTrackerAPI\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj": {}
+    "C:\\Users\\Madushan\\Documents\\GitHub\\github-basics-Madushankumarasiri\\Backend\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Madushan\\Desktop\\github test\\ExpenseTrackerAPI\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj": {
+    "C:\\Users\\Madushan\\Documents\\GitHub\\github-basics-Madushankumarasiri\\Backend\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Madushan\\Desktop\\github test\\ExpenseTrackerAPI\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Madushan\\Documents\\GitHub\\github-basics-Madushankumarasiri\\Backend\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
         "projectName": "ExpenseTrackerAPI",
-        "projectPath": "C:\\Users\\Madushan\\Desktop\\github test\\ExpenseTrackerAPI\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
+        "projectPath": "C:\\Users\\Madushan\\Documents\\GitHub\\github-basics-Madushankumarasiri\\Backend\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
         "packagesPath": "C:\\Users\\Madushan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Madushan\\Desktop\\github test\\ExpenseTrackerAPI\\ExpenseTrackerAPI\\obj\\",
+        "outputPath": "C:\\Users\\Madushan\\Documents\\GitHub\\github-basics-Madushankumarasiri\\Backend\\ExpenseTrackerAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
