@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '5.0.x'
 
       - name: Restore Dependencies
-        run: dotnet restore
+        run: dotnet restore Backend
 
       - name: Build App
-        run: dotnet build -c Release --no-restore
+        run: dotnet build -c Release --no-restore Backend
