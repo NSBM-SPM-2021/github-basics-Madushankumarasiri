@@ -1,4 +1,5 @@
-﻿CREATE TABLE [dbo].[Expenses]
+﻿--Creating Expenses Table
+CREATE TABLE [dbo].[Expenses]
 (
 	[ExpenseID] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[ExpenseTypeID] INT NULL,
