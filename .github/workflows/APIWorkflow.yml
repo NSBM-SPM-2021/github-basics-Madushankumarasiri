@@ -2,7 +2,7 @@ name: CI CD for API
 on:
   push:
     branches:
-      - Dev
+      - Main
     paths:
       - Backend/**
 
