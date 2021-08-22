@@ -1,9 +1,31 @@
 import './App.css';
 import Form from './Components/Form';
+import Expenses from './Components/Expenses';
+import { useState, useEffect } from 'react';
 
 function App() {
+
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    const getExpenses = async () => {
+      const expensesFromServer = await fetchExpenses();
+      console.log(expensesFromServer);
+      setExpenses(expensesFromServer);
+    }
+    getExpenses();
+  }, [])
+
+  //Fetching All Expenses
+  const fetchExpenses = async () => {
+    const res = await fetch("http://localhost:28045/api/Expenses");
+    const data = await res.json();
+  
+    return data;
+  }
+
+  //Add Expense Method
   const addExpense = async (expense) => {
-    //console.log(expense);
     const res = await fetch("http://localhost:28045/api/Expenses", {
       method: "POST",
       headers: {
@@ -19,7 +41,7 @@ function App() {
       Expense Tracker
     </div>
     <div className="col-5">
-      One of three columns
+      <Expenses expenses={expenses}/>
     </div>
     <div className="col-4">
       <Form onAdd={addExpense}/>
