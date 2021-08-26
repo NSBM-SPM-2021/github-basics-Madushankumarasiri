@@ -20,6 +20,7 @@ body{
   font-weight: bold;
   font-family: "Quicksand";
   background-color: #EEEEEE;
+  height: 100vh;
 }
 
 .btn{
@@ -54,4 +55,25 @@ select:focus
 
 .add {
   color: #00ADB5;
+}
+
+.item {
+  /* background-color: #EEEEEE; */
+  border-radius: 5px;
+  height: 70px;
+  margin-bottom: 10px;
+  padding: 15px;
+  position: relative;
+}
+
+.description {
+  margin-bottom: 2px;
+}
+
+.item-value{
+  display: inline;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  top: 30px
 }
