@@ -77,3 +77,46 @@ select:focus
   right: 20px;
   top: 30px
 }
+
+.page-link{
+  color: #222831;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: #222831;
+  background-color: #EEEEEE;
+  border-color: #EEEEEE;
+}
+
+.page-item.active .page-link {
+  background-color: #00ADB5 !important;
+  border-color: #00ADB5;
+}
+
+.total {
+  padding: 15px 15px 0 15px;
+  
+}
+
+.total-heading{
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.total-value{
+  font-weight: bold;
+}
+
+hr{
+  margin: 0 !important;
+}
+
+.count{
+  display: inline;
+}
+
+
+/* .pagination-links {
+  position: fixed;
+} */

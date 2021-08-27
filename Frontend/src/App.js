@@ -1,11 +1,14 @@
 import './App.css';
 import Form from './Components/Form';
 import Expenses from './Components/Expenses';
+import Pagination from './Components/pagination';
+import { paginate } from './Components/utils/paginate';
 import { useState, useEffect } from 'react';
 
 function App() {
 
   const [expenses, setExpenses] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const getExpenses = async () => {
@@ -34,6 +37,16 @@ function App() {
       body: JSON.stringify(expense)
     })
   }
+
+  //For pagination
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  }
+
+  const totalCount = expenses.length;
+  const pageSize = 5;
+  const expensesForDisplay = paginate(expenses, currentPage, pageSize);
+
   return (
     <div className="container-fluid mt-0">
   <div className="row">
@@ -41,7 +54,11 @@ function App() {
       Expense Tracker
     </div>
     <div className="col-5">
-      <Expenses expenses={expenses}/>
+      <Expenses expenses={expensesForDisplay}/>
+      <Pagination itemCount={totalCount} 
+            pageSize={pageSize}
+            currentPage= {currentPage } 
+            onPageChange={ handlePageChange } />
     </div>
     <div className="col-4">
       <Form onAdd={addExpense}/>
