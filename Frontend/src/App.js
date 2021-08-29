@@ -17,7 +17,7 @@ function App() {
       setExpenses(expensesFromServer);
     }
     getExpenses();
-  }, [])
+  }, [expenses])
 
   //Fetching All Expenses
   const fetchExpenses = async () => {
@@ -36,6 +36,8 @@ function App() {
       },
       body: JSON.stringify(expense)
     })
+    const data = await res.json()
+    setExpenses([...expenses, data]);
   }
 
   //For pagination
@@ -45,7 +47,7 @@ function App() {
 
   const totalCount = expenses.length;
   const pageSize = 5;
-  const expensesForDisplay = paginate(expenses, currentPage, pageSize);
+ // const expensesForDisplay = paginate(expenses, currentPage, pageSize);
 
   return (
     <div className="container-fluid mt-0">
@@ -54,7 +56,7 @@ function App() {
       Expense Tracker
     </div>
     <div className="col-5">
-      <Expenses expenses={expensesForDisplay}/>
+      <Expenses expenses={paginate(expenses, currentPage, pageSize)}/>
       <Pagination itemCount={totalCount} 
             pageSize={pageSize}
             currentPage= {currentPage } 
