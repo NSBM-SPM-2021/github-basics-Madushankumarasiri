@@ -24,7 +24,7 @@ namespace ExpenseTrackerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Expenses>>> GetExpenses()
         {
-            return await _context.Expenses.ToListAsync();
+            return await _context.Expenses.OrderByDescending(e => e.Date).ToListAsync();
         }
 
         [HttpPost]
