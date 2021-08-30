@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* .container{
+  
+} */
+
+html{
+  padding: 0;
+}
+
+body{
+  font-family:  "Quicksand";
+  font-weight: 600;
+}
+
+.heading{
+  font-size: 30px;
+  color: #00ADB5;
+  font-weight: bold;
+  font-family: "Quicksand";
+  background-color: #EEEEEE;
+  height: 100vh;
+}
+
+.btn{
+  background-color: #00ADB5;
+  border-color: #00ADB5;
+  width: 100%;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+.btn:focus,
+select:focus
+{   
+  border-color: #00ADB5 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 5px #00ADB5 !important;
+  outline: 0 none !important;
+}
+
+.btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+      background-color: #222831 !important;
+      border-color: #222831;
+}
+
+.form-control, select {
+  border-radius: 10px !important;
+}
+
+
+.add {
+  color: #00ADB5;
+}
+
+.item {
+  /* background-color: #EEEEEE; */
+  border-radius: 5px;
+  height: 70px;
+  margin-bottom: 10px;
+  padding: 15px;
+  position: relative;
+}
+
+.description {
+  margin-bottom: 2px;
+}
+
+.item-value{
+  display: inline;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  top: 30px
+}
+
+.page-link{
+  color: #222831;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: #222831;
+  background-color: #EEEEEE;
+  border-color: #EEEEEE;
+}
+
+.page-item.active .page-link {
+  background-color: #00ADB5 !important;
+  border-color: #00ADB5;
+}
+
+.total {
+  padding: 15px 15px 0 15px;
+  
+}
+
+.total-heading{
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.total-value{
+  font-weight: bold;
+}
+
+hr{
+  margin: 0 !important;
+}
+
+.count{
+  display: inline;
+}
+
+
+/* .pagination-links {
+  position: fixed;
+} */
