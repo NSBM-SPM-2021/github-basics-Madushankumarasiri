@@ -4,39 +4,40 @@ import Expenses from './Components/Expenses';
 import Pagination from './Components/pagination';
 import { paginate } from './Components/utils/paginate';
 import { useState, useEffect } from 'react';
-import firebaseRef from './Components/utils/firebase.js'
 
 function App() {
 
   const [expenses, setExpenses] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const ref = firebaseRef.firestore().collection("expenses").orderBy("date", "desc");
+  useEffect(() => {
+    const getExpenses = async () => {
+      const expensesFromServer = await fetchExpenses();
+      console.log(expensesFromServer);
+      setExpenses(expensesFromServer);
+    }
+    getExpenses();
+  }, [expenses])
 
-  function getExpenses() {
-    ref.onSnapshot((querySnapshot) => {
-      const items =[];
-      querySnapshot.forEach((doc) => {
-        items.push({id: doc.id, ...doc.data()});
-      });
-      //console.log(items);
-      setExpenses(items);
-    })
+  //Fetching All Expenses
+  const fetchExpenses = async () => {
+    const res = await fetch("http://localhost:28045/api/Expenses");
+    const data = await res.json();
+  
+    return data;
   }
 
-  useEffect(() => {
-    getExpenses(); 
-    })
-
   //Add Expense Method
-  const addExpense = (expense) => {
-    const userRef = firebase2.firestore().collection("expenses").add({
-      expenseValue: expense.expenseValue,
-      description: expense.description,
-      date: expense.date,
-      category: expense.category 
-    }); 
-    setExpenses([...expenses, userRef]);
+  const addExpense = async (expense) => {
+    const res = await fetch("http://localhost:28045/api/Expenses", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(expense)
+    })
+    const data = await res.json()
+    setExpenses([...expenses, data]);
   }
 
   //For pagination

@@ -27,7 +27,7 @@ const Form = ({ onAdd }) => {
 
     return ( 
       <div className="p-2" style={{width: "80%"}}>
-        <h3 className="mt-4 mb-4 add">Add Expense</h3>
+        <h3 className="mt-4 mb-4 add">Add Transaction</h3>
       <form onSubmit={onSubmit}>
       <div className="mb-3">
         <label className="form-label"> Value</label>
