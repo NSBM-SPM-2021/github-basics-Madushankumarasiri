@@ -11,6 +11,7 @@ function App() {
   const [expenses, setExpenses] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
+
   const ref = firebaseRef.firestore().collection("expenses").orderBy("date", "desc");
 
   function getExpenses() {
@@ -23,6 +24,10 @@ function App() {
       setExpenses(items);
     })
   }
+  console.log(typeof expenses)
+//   for (var key of Object.keys(expenses)) {
+//     console.log(key)
+// }
 
   useEffect(() => {
     getExpenses(); 
@@ -55,7 +60,7 @@ function App() {
       Expense Tracker
     </div>
     <div className="col-5">
-      <Expenses expenses={paginate(expenses, currentPage, pageSize)}/>
+      <Expenses expensesForTotal={expenses} expenses={paginate(expenses, currentPage, pageSize)}/>
       <Pagination itemCount={totalCount} 
             pageSize={pageSize}
             currentPage= {currentPage } 
