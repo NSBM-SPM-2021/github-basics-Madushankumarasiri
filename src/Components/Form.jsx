@@ -44,8 +44,12 @@ const Form = ({ onAdd }) => {
         <select className="form-select test" value={category}
         onChange={(e) => setCategory(e.target.value)}>
         <option value="0">Select a Category</option>
-        <option value="1">Title 1</option>
-        <option value="2">Title 2</option>
+        <option value="Education">Education</option>
+        <option value="Food">Food</option>
+        <option value="Debts">Debts</option>
+        <option value="Donations">Donations</option>
+        <option value="Health">Health</option>
+        <option value="Other">Other</option> 
      </select>
       </div>
       <div className="mb-3">

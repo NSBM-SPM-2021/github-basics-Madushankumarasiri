@@ -50,14 +50,14 @@ function App() {
   }
 
   const totalCount = expenses.length;
-  const pageSize = 5;
+  const pageSize = 6;
  // const expensesForDisplay = paginate(expenses, currentPage, pageSize);
 
   return (
     <div className="container-fluid mt-0">
   <div className="row">
-    <div className="col-3 heading pt-3">
-      Expense Tracker
+    <div className="col-3 pt-2 sidebar">
+      <div className="heading pt-3">Expense Tracker</div>
     </div>
     <div className="col-5">
       <Expenses expensesForTotal={expenses} expenses={paginate(expenses, currentPage, pageSize)}/>
