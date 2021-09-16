@@ -5,6 +5,7 @@ import Pagination from './Components/pagination';
 import { paginate } from './Components/utils/paginate';
 import { useState, useEffect } from 'react';
 import firebaseRef from './Components/utils/firebase.js'
+import Greeting from './Components/greeting';
 
 function App() {
 
@@ -58,6 +59,10 @@ function App() {
   <div className="row">
     <div className="col-3 pt-2 sidebar">
       <div className="heading pt-3">Expense Tracker</div>
+      <Greeting/>
+      <footer>
+      <p>Expense Tracker | Copyright &copy; 2021</p>
+      </footer>
     </div>
     <div className="col-5">
       <Expenses expensesForTotal={expenses} expenses={paginate(expenses, currentPage, pageSize)}/>

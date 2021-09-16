@@ -123,6 +123,11 @@ hr{
 .test{
   display: inline;
 }
+footer {
+  position:fixed;
+  bottom: 10px;
+  left: 25px;
+}
 
 
 /* .pagination-links {
