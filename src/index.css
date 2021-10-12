@@ -14,13 +14,17 @@ body{
   font-weight: 600;
 }
 
+.sidebar{
+  background-color: #EEEEEE;
+  height: 100vh;
+}
+
 .heading{
-  font-size: 30px;
+  font-size: 35px;
   color: #00ADB5;
   font-weight: bold;
   font-family: "Quicksand";
-  background-color: #EEEEEE;
-  height: 100vh;
+  margin-left: 15px;
 }
 
 .btn{
@@ -114,6 +118,15 @@ hr{
 
 .count{
   display: inline;
+}
+
+.test{
+  display: inline;
+}
+footer {
+  position:fixed;
+  bottom: 10px;
+  left: 25px;
 }
 
 
