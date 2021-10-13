@@ -129,6 +129,12 @@ footer {
   left: 25px;
 }
 
+.img-thumbnail {
+  background-color: unset !important;
+  border: unset !important;
+  margin-top: 50px;
+}
+
 
 /* .pagination-links {
   position: fixed;
