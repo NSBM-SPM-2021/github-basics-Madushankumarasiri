@@ -1,9 +1,4 @@
-// import { FcAlarmClock } from 'react-icons/fc';
-// import { FcMoneyTransfer } from 'react-icons/fc';
-// import { FcTodoList } from 'react-icons/fc';
-// import { FcSalesPerformance } from 'react-icons/fc';
-// import { FcViewDetails } from 'react-icons/fc';
- import { useState } from 'react';
+import { useState } from 'react';
 
 
 const Form = ({ onAdd }) => {
@@ -18,6 +13,14 @@ const Form = ({ onAdd }) => {
         alert('Please add a Value');
         return
     }
+    if(isNaN(expenseValue)){
+      alert('Please enter a valid value');
+      return
+    }
+    if(!description){
+      alert('Please add a description');
+      return
+    }
     onAdd({ expenseValue, date, category, description });
     setExpenseValue('');
     setDate('');
@@ -31,13 +34,13 @@ const Form = ({ onAdd }) => {
       <form onSubmit={onSubmit}>
       <div className="mb-3">
         <label className="form-label"> Value</label>
-        <input type="text" className="form-control" value={expenseValue}
+        <input type="text" className="form-control" maxLength="7" value={expenseValue}
         onChange={(e) => setExpenseValue(e.target.value)} />    
       </div>
       <div className="mb-3">
         <label className="form-label">Date</label>
         <input type="datetime-local" className="form-control" value={date}
-        onChange={(e) => setDate(e.target.value)}/>
+        onChange={(e) => setDate(e.target.value)} required/>
       </div>
       <div className="mb-3">
         <label className="form-label">Category </label>
@@ -58,7 +61,7 @@ const Form = ({ onAdd }) => {
       onChange={(e) => setDescription(e.target.value)}
       ></textarea>
       </div>
-      <button type="submit" className="btn btn-primary shadow-none mt-2">SUBMIT</button>
+      <button id="SubmitButton" type="submit" className="btn btn-primary shadow-none mt-2">SUBMIT</button>
     </form>
     </div>
      );
