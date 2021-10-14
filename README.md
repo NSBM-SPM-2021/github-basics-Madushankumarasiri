@@ -18,8 +18,8 @@ Simple Project Created using React and Firebase.
 
 ## Unit Testing
 
-- Jest
-- Enzyme
+- Jest - An open-source testing framework built on JavaScript
+- Enzyme - A JavaScript Testing utility for React 
 
 ## Trello Board
 
