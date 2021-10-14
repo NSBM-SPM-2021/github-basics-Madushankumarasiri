@@ -18,7 +18,8 @@ Simple Project Created using React and Firebase.
 
 ## Trello Board
 
-![Screenshot 2021-10-13 112414](https://user-images.githubusercontent.com/61668132/137075230-3fc499ba-b51a-4cbd-ab71-5184564493a4.png)
+![Screenshot 2021-10-14 165615](https://user-images.githubusercontent.com/61668132/137308697-2eef09e0-7f8f-4294-9938-4239baa3b1e8.png)
+
 
 
 ## CI/CD with Github Actions
