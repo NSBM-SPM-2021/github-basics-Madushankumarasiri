@@ -19,11 +19,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: npm install and build
+    - name: Installing Packages and Building
       run: |
         npm install
         npm run build
-        npm run test
+    - name: Running Unit Tests
+      run: npm run test
     - name: Archive Build
       uses: actions/upload-artifact@v2
       with:
