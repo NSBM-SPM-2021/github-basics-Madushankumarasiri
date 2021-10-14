@@ -16,6 +16,11 @@ Simple Project Created using React and Firebase.
 - React - A declarative, efficient, and flexible JavaScript library
 - Firebase -  Build, manage, and grow apps easily
 
+## Unit Testing
+
+- Jest
+- Enzyme
+
 ## Trello Board
 
 ![Screenshot 2021-10-14 165615](https://user-images.githubusercontent.com/61668132/137308697-2eef09e0-7f8f-4294-9938-4239baa3b1e8.png)
